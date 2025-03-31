@@ -186,7 +186,7 @@
     <div class="container">
         <img src="uwi_logo_1.png" alt="UWI Logo" class="logo">
         <h1>UWI GPA Calculator</h1>
-        <p class="repo-name">Repository: uwi-gpa-calculator</p>
+        <p class="repo-name">R</p>
         <p>Use this UWI GPA calculator to easily compute your University of the West Indies GPA. Select your grades and credits below.</p>
         <div id="courses">
             <div class="course">
