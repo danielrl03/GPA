@@ -16,22 +16,22 @@
             padding: 20px;
             color: #333;
             display: flex;
-            justify-content: center;
-            min-height: 100vh;
+            justify-content: center; /* Centers container horizontally */
+            align-items: center; /* Centers container vertically */
+            min-height: 100vh; /* Ensures body takes full viewport height */
         }
         .container {
             max-width: 700px;
             width: 100%;
-            margin: 0 auto;
             background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: center; /* Centers all text inside container */
         }
         .logo {
             display: block;
-            margin: 0 auto 20px;
+            margin: 0 auto 20px; /* Already centered horizontally */
             max-width: 75px;
         }
         h1 {
@@ -44,17 +44,20 @@
         .course {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: center; /* Centers course elements horizontally */
             margin-bottom: 15px;
             background-color: #f9f9f9;
             padding: 10px;
             border-radius: 5px;
             width: 100%;
+            flex-wrap: wrap; /* Ensures items wrap cleanly on smaller screens */
+            gap: 10px; /* Adds consistent spacing between elements */
         }
         label {
             width: 80px;
             font-weight: bold;
             color: #555;
+            text-align: center; /* Ensures label text is centered */
         }
         select {
             padding: 8px;
@@ -102,7 +105,7 @@
         .button-group {
             margin-top: 20px;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centers buttons horizontally */
             gap: 10px;
             flex-wrap: wrap;
         }
@@ -113,14 +116,14 @@
             color: #004080;
         }
         .grade-table {
-            margin: 30px auto 0;
+            margin: 30px auto 0; /* Already centered horizontally */
             width: 100%;
             border-collapse: collapse;
         }
         .grade-table th, .grade-table td {
             padding: 10px;
             border: 1px solid #ddd;
-            text-align: center;
+            text-align: center; /* Centers table content */
         }
         .grade-table th {
             background-color: #004080;
@@ -138,13 +141,13 @@
             }
             .course {
                 flex-direction: column;
-                align-items: center;
+                align-items: center; /* Centers items vertically in column layout */
                 padding: 15px;
             }
             label {
                 width: 100%;
                 margin-bottom: 10px;
-                text-align: center;
+                text-align: center; /* Keeps label text centered */
             }
             select {
                 width: 100%;
@@ -159,6 +162,7 @@
             .button-group {
                 flex-direction: column;
                 gap: 15px;
+                align-items: center; /* Centers buttons in column layout */
             }
             .button-group button {
                 width: 100%;
@@ -174,6 +178,7 @@
     </style>
 </head>
 <body>
+    <!-- Your HTML body content remains unchanged -->
     <div class="container">
         <img src="uwi_logo_1.png" alt="UWI Logo" class="logo">
         <h1>UWI GPA Calculator</h1>
