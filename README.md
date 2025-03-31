@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="google-site-verification" content="-BH3PGI1RwCB9FCLOXXV0p-3-21gsnhuZ5iS8LASdgk" />
     <meta name="description" content="A GPA calculator for University of the West Indies students with grade ranges and quality points.">
     <meta name="keywords" content="UWI GPA calculator, University of the West Indies, GPA calculation, student tools">
     <meta name="author" content="Your Name">
-    <title></title>
+    <title>UWI GPA Calculator</title>
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -15,14 +15,19 @@
             margin: 0;
             padding: 20px;
             color: #333;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            min-height: 100vh; /* Ensure body takes full height */
         }
         .container {
             max-width: 700px;
+            width: 100%; /* Ensure it scales on mobile */
             margin: 0 auto;
             background-color: #ffffff;
-            padding: 30px;
+            padding: 20px; /* Reduced from 30px for mobile */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center all text within container */
         }
         .logo {
             display: block;
@@ -34,26 +39,35 @@
             color: #004080;
             margin-bottom: 20px;
         }
+        p {
+            text-align: center; /* Center the paragraph */
+        }
         .course {
             display: flex;
             align-items: center;
+            justify-content: center; /* Center course elements horizontally */
             margin-bottom: 15px;
             background-color: #f9f9f9;
             padding: 10px;
             border-radius: 5px;
+            width: 100%; /* Full width for consistency */
         }
         label {
             width: 80px;
             font-weight: bold;
             color: #555;
+            text-align: left; /* Align label text left for readability */
         }
         select {
             padding: 8px;
             margin-right: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            width: 160px; /* Increased from 120px to show full text */
+            width: 160px;
             background-color: #fff;
+            -webkit-appearance: none; /* Improve dropdown look on mobile */
+            -moz-appearance: none;
+            appearance: none;
         }
         button {
             padding: 10px 20px;
@@ -62,6 +76,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
+            touch-action: manipulation; /* Prevent zoom on tap */
         }
         button.add {
             background-color: #28a745;
@@ -89,6 +104,9 @@
         .button-group {
             margin-top: 20px;
             text-align: center;
+            display: flex;
+            justify-content: center; /* Center buttons horizontally */
+            flex-wrap: wrap; /* Allow wrapping on small screens */
         }
         #result {
             margin-top: 25px;
@@ -101,6 +119,8 @@
             margin-top: 30px;
             width: 100%;
             border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto; /* Center the table */
         }
         .grade-table th, .grade-table td {
             padding: 10px;
@@ -115,17 +135,42 @@
             background-color: #f9f9f9;
         }
         @media (max-width: 600px) {
+            body {
+                padding: 10px; /* Reduce padding on mobile */
+            }
+            .container {
+                padding: 15px; /* Further reduced for mobile */
+            }
             .course {
                 flex-direction: column;
-                align-items: flex-start;
-            }
-            select, button.delete {
-                width: 100%; /* Still full width on mobile */
-                margin: 5px 0;
+                align-items: center; /* Center items in column */
+                padding: 15px; /* More breathing room */
             }
             label {
-                width: auto;
-                margin-bottom: 5px;
+                width: 100%; /* Full width for readability */
+                margin-bottom: 8px;
+                text-align: center; /* Center label on mobile */
+            }
+            select {
+                width: 100%; /* Full width on mobile */
+                margin-right: 0;
+                margin-bottom: 10px; /* Space between dropdowns */
+                max-width: 100%; /* Prevent overflow */
+            }
+            button.delete {
+                width: 100%;
+                margin: 0;
+                padding: 10px; /* Consistent with other buttons */
+            }
+            .button-group {
+                flex-direction: column; /* Stack buttons vertically */
+            }
+            .button-group button {
+                width: 100%;
+                margin: 5px 0; /* Vertical spacing */
+            }
+            .grade-table {
+                font-size: 0.9em; /* Smaller text to fit */
             }
         }
     </style>
@@ -133,7 +178,7 @@
 <body>
     <div class="container">
         <img src="uwi_logo_1.png" alt="UWI Logo" class="logo">
-        <h1></h1>
+        <h1>UWI GPA Calculator</h1>
         <p>Calculate your GPA easily with this tool designed for University of the West Indies students. Select your grades and credits below.</p>
         <div id="courses">
             <div class="course">
