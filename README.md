@@ -16,9 +16,9 @@
             padding: 20px;
             color: #333;
             display: flex;
-            justify-content: center; /* Centers container horizontally */
-            align-items: center; /* Centers container vertically */
-            min-height: 100vh; /* Ensures body takes full viewport height */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         .container {
             max-width: 700px;
@@ -27,15 +27,20 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Centers all text inside container */
+            text-align: center;
         }
         .logo {
             display: block;
-            margin: 0 auto 20px; /* Already centered horizontally */
+            margin: 0 auto 20px;
             max-width: 75px;
         }
         h1 {
             color: #004080;
+            margin-bottom: 20px;
+        }
+        .repo-name {
+            font-style: italic;
+            color: #666;
             margin-bottom: 20px;
         }
         p {
@@ -44,20 +49,20 @@
         .course {
             display: flex;
             align-items: center;
-            justify-content: center; /* Centers course elements horizontally */
+            justify-content: center;
             margin-bottom: 15px;
             background-color: #f9f9f9;
             padding: 10px;
             border-radius: 5px;
             width: 100%;
-            flex-wrap: wrap; /* Ensures items wrap cleanly on smaller screens */
-            gap: 10px; /* Adds consistent spacing between elements */
+            flex-wrap: wrap;
+            gap: 10px;
         }
         label {
             width: 80px;
             font-weight: bold;
             color: #555;
-            text-align: center; /* Ensures label text is centered */
+            text-align: center;
         }
         select {
             padding: 8px;
@@ -105,7 +110,7 @@
         .button-group {
             margin-top: 20px;
             display: flex;
-            justify-content: center; /* Centers buttons horizontally */
+            justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
         }
@@ -116,14 +121,14 @@
             color: #004080;
         }
         .grade-table {
-            margin: 30px auto 0; /* Already centered horizontally */
+            margin: 30px auto 0;
             width: 100%;
             border-collapse: collapse;
         }
         .grade-table th, .grade-table td {
             padding: 10px;
             border: 1px solid #ddd;
-            text-align: center; /* Centers table content */
+            text-align: center;
         }
         .grade-table th {
             background-color: #004080;
@@ -141,13 +146,13 @@
             }
             .course {
                 flex-direction: column;
-                align-items: center; /* Centers items vertically in column layout */
+                align-items: center;
                 padding: 15px;
             }
             label {
                 width: 100%;
                 margin-bottom: 10px;
-                text-align: center; /* Keeps label text centered */
+                text-align: center;
             }
             select {
                 width: 100%;
@@ -162,7 +167,7 @@
             .button-group {
                 flex-direction: column;
                 gap: 15px;
-                align-items: center; /* Centers buttons in column layout */
+                align-items: center;
             }
             .button-group button {
                 width: 100%;
@@ -178,10 +183,10 @@
     </style>
 </head>
 <body>
-    <!-- Your HTML body content remains unchanged -->
     <div class="container">
         <img src="uwi_logo_1.png" alt="UWI Logo" class="logo">
         <h1>UWI GPA Calculator</h1>
+        <p class="repo-name">Repository: uwi-gpa-calculator</p>
         <p>Use this UWI GPA calculator to easily compute your University of the West Indies GPA. Select your grades and credits below.</p>
         <div id="courses">
             <div class="course">
@@ -266,7 +271,7 @@
                 <tr><td>F3</td><td>0.0</td><td>0-29</td></tr>
             </tbody>
         </table>
-        <p>Built for University of the West Indies students using the official 2014/2015 grading policy.</p>
+        <p>Built for University of the West Indies students using the official 2014/2015 grading policy and still accurate in 2025.</p>
     </div>
 
     <script>
